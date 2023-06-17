@@ -1,10 +1,21 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import CreateNewBoard from './components/CreateNewBoard';
 import DashBoard from './components/DashBoard';
 
-function App() {
+function App() {  
   return (
     <div >
-      <DashBoard/>
+      <Routes>
+        <Route
+          path='/'
+          element={<DashBoard />}
+        />
+        <Route
+          path='/newboard'
+          element={<CreateNewBoard />}
+        />
+      </Routes>
     </div>
   );
 }
