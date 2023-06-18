@@ -27,6 +27,7 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
+import Grid from '@mui/material/Grid';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -294,11 +295,25 @@ const PostPage = () => {
                             ))
                         ) : (
                             <>
-                                <img src={NoPostMobile} alt="Image" />
-                                <Typography variant='h7'><b>Nothing here yet</b></Typography>
-                                <Typography variant='h8' paddingTop={1}>
-                                    Create your first post by clicking on the '+' button above
-                                </Typography>
+                                <Grid
+                                    container
+                                    direction="column"
+                                    justify="center"
+                                    alignItems="center"
+                                    style={{ height: '100vh' }}
+                                >
+                                    <Grid item>
+                                        <img src={NoPostMobile} alt="Image" />
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography variant='h7'><b>Nothing here yet</b></Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography variant='h8' paddingTop={1}>
+                                            Create your first post by clicking on the '+' button above
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
                             </>
                         )}
 
