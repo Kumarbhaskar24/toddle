@@ -86,13 +86,12 @@ const DashBoard = () => {
     return (
         <Box>
             <Stack
-                direction="row"
-                sx={{ ml: 3, paddingTop: 3, paddingBottom: 1 }}
+              direction="row" sx={{ ml: 3, paddingTop: 1 }}
                 borderBottom={1}
                 borderColor="lightslategrey"
             >
                 <img src={LogoTo} alt="Logo" />
-                <Paper sx={{ ml: '50%',mr:'5%' }}>
+                <Paper sx={{ ml:100,mr:5 }}>
                     <IconButton type="button" sx={{ p: '10px' }} aria-label="search" >
                         <SearchIcon />
                     </IconButton>
@@ -103,7 +102,7 @@ const DashBoard = () => {
                         onChange={(e) => setSearchText(e.target.value)}
                     />
                 </Paper>
-                <Button variant="contained" sx={{ backgroundColor: 'red', ml: 13,mr:2 }} startIcon={<AddIcon />} onClick={handleOpenDialog}>
+                <Button variant="contained" sx={{ backgroundColor: 'red', ml:"auto",mr:"auto",mt:"auto",mb:"auto" }} startIcon={<AddIcon />} onClick={handleOpenDialog}>
                     Create New Board
                 </Button>
 
